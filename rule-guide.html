@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rules Guide · Inkura</title>
+  <meta name="description" content="Inkura community rule format guide for source parsing and RSS feeds." />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./theme.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="./index.html"><span class="dot"></span>Inkura</a>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./support.html">Support</a>
+        <a href="./disclaimer.html">Disclaimer</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Dark">🌙</button>
+        <a class="lang" href="./zh/rule-guide.html">中文</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="doc">
+      <h1>Rules Guide</h1>
+      <p class="meta">Updated: 2026-03-04 · This page is authored by Inkura for product compatibility guidance only.</p>
+
+      <h2>1. Scope</h2>
+      <p>Inkura supports a community-compatible rule format for web source parsing and RSS feed reading. This guide describes Inkura behavior, not third-party project documentation.</p>
+
+      <h2>2. Source Rule Model</h2>
+      <ul>
+        <li>Basic fields: source URL, source name, enabled status.</li>
+        <li>Search rules: list, title, author, detail URL, cover, intro.</li>
+        <li>Detail rules: metadata extraction and table-of-contents URL.</li>
+        <li>TOC rules: chapter list, chapter title, chapter URL, optional next-page.</li>
+        <li>Content rules: chapter content extraction, optional content next-page.</li>
+      </ul>
+
+      <h2>3. Supported Expression Types</h2>
+      <ul>
+        <li>CSS-like selectors for HTML extraction.</li>
+        <li>XPath for structured DOM querying.</li>
+        <li>JSONPath for JSON API responses.</li>
+        <li>Regex replacement for cleanup after extraction.</li>
+        <li>JavaScript post-processing in constrained contexts.</li>
+      </ul>
+
+      <h2>4. URL & Request Options</h2>
+      <p>Rules can include request options such as method, headers, charset, and optional web rendering behavior. Use only when required by the target site.</p>
+
+      <h2>5. RSS Rules</h2>
+      <ul>
+        <li>Feed URL: required; must return valid RSS/Atom XML.</li>
+        <li>List mapping: item title, link, publication date, summary.</li>
+        <li>Detail mapping (optional): full content extraction from entry link.</li>
+        <li>Refresh strategy: page index or timestamp based on source behavior.</li>
+      </ul>
+
+      <h2>6. Compliance Notes</h2>
+      <ul>
+        <li>Only configure sources you are legally allowed to access.</li>
+        <li>Respect target site terms, robots policy, and copyright rules.</li>
+        <li>Avoid credential abuse, automated bypass, or prohibited scraping.</li>
+      </ul>
+
+      <h2>7. Troubleshooting</h2>
+      <ul>
+        <li>If list parsing fails, validate selector scope on source HTML/JSON.</li>
+        <li>If chapter content is empty, verify detail URL and content rule order.</li>
+        <li>If encoding appears broken, set charset explicitly in request options.</li>
+      </ul>
+
+      <h2>8. Contact</h2>
+      <p>For format compatibility questions, contact <a href="mailto:support@inkura.app">support@inkura.app</a>.</p>
+    </section>
+
+    <footer>
+      <span>© 2026 Inkura</span>
+      <a href="mailto:support@inkura.app">support@inkura.app</a>
+      <a href="./disclaimer.html">Disclaimer</a>
+    </footer>
+  </main>
+</body>
+</html>

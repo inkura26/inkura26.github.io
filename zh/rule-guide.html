@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>规则说明 · Inkura</title>
+  <meta name="description" content="Inkura 社区兼容规则格式说明（书源与 RSS）。" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../theme.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="./index.html"><span class="dot"></span>Inkura</a>
+      <nav class="nav">
+        <a href="./index.html">首页</a>
+        <a href="./privacy.html">隐私政策</a>
+        <a href="./support.html">支持</a>
+        <a href="./disclaimer.html">免责声明</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深色模式" title="深色">🌙</button>
+        <a class="lang" href="../rule-guide.html">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="doc">
+      <h1>规则说明</h1>
+      <p class="meta">更新日期：2026-03-04 · 本页由 Inkura 独立编写，仅用于产品兼容说明。</p>
+
+      <h2>1. 适用范围</h2>
+      <p>Inkura 支持社区兼容的规则格式，用于网页书源解析与 RSS 阅读。本说明描述的是 Inkura 的实现行为，不引用第三方项目教程文本。</p>
+
+      <h2>2. 书源规则模型</h2>
+      <ul>
+        <li>基础字段：书源地址、书源名称、启用状态。</li>
+        <li>搜索规则：列表、书名、作者、详情地址、封面、简介。</li>
+        <li>详情规则：元数据提取与目录地址。</li>
+        <li>目录规则：章节列表、章节名、章节 URL、可选下一页。</li>
+        <li>正文规则：正文提取与可选下一页规则。</li>
+      </ul>
+
+      <h2>3. 支持的表达类型</h2>
+      <ul>
+        <li>CSS 类选择器：适合 HTML 结构提取。</li>
+        <li>XPath：适合结构化节点定位。</li>
+        <li>JSONPath：适合 JSON 接口返回解析。</li>
+        <li>正则替换：用于提取后的净化处理。</li>
+        <li>JavaScript：用于受限场景下的后处理。</li>
+      </ul>
+
+      <h2>4. 请求与 URL 选项</h2>
+      <p>规则可包含请求选项，如 method、headers、charset、可选 web 渲染行为。仅在目标站点确有需要时启用。</p>
+
+      <h2>5. RSS 规则</h2>
+      <ul>
+        <li>订阅地址：必填，需返回合法 RSS/Atom XML。</li>
+        <li>列表映射：标题、链接、发布时间、摘要。</li>
+        <li>详情映射（可选）：从条目链接提取完整正文。</li>
+        <li>刷新策略：按页码或时间戳，依据源站行为配置。</li>
+      </ul>
+
+      <h2>6. 合规提示</h2>
+      <ul>
+        <li>仅配置你有合法访问权的内容来源。</li>
+        <li>遵守目标站点条款、robots 规则与版权要求。</li>
+        <li>避免账号滥用、绕过限制或被禁止的自动化抓取。</li>
+      </ul>
+
+      <h2>7. 常见排查</h2>
+      <ul>
+        <li>列表解析失败：先校验选择器范围是否覆盖目标节点。</li>
+        <li>正文为空：检查详情 URL 与正文规则执行顺序。</li>
+        <li>乱码：在请求选项中显式指定 charset。</li>
+      </ul>
+
+      <h2>8. 联系方式</h2>
+      <p>如需规则兼容支持，请联系 <a href="mailto:support@inkura.app">support@inkura.app</a>。</p>
+    </section>
+
+    <footer>
+      <span>© 2026 Inkura</span>
+      <a href="mailto:support@inkura.app">support@inkura.app</a>
+      <a href="./disclaimer.html">免责声明</a>
+    </footer>
+  </main>
+</body>
+</html>
