@@ -1,46 +1,57 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inkura · 墨读</title>
-  <meta name="description" content="Inkura 墨读 - iOS 阅读应用，专注沉浸式阅读体验。" />
+  <title>Inkura · Read with Focus</title>
+  <meta name="description" content="Inkura is a premium reading app for focused, elegant, and immersive reading on iOS." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">Inkura</div>
-    <nav>
-      <a href="./privacy.html">隐私政策</a>
-      <a href="./terms.html">服务条款</a>
-      <a href="./support.html">支持</a>
-    </nav>
+    <div class="shell topbar-inner">
+      <a class="brand" href="./index.html"><span class="dot"></span>Inkura</a>
+      <nav class="nav">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./support.html">Support</a>
+        <a class="lang" href="./zh/index.html">中文</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="hero">
-    <p class="tag">Read with Focus</p>
-    <h1>墨读 Inkura</h1>
-    <p class="subtitle">简洁 · 安静 · 有质感的阅读体验</p>
-    <div class="actions">
-      <a class="btn primary" href="./support.html">获取支持</a>
-      <a class="btn" href="./privacy.html">查看隐私政策</a>
-    </div>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Reading Experience</p>
+      <h1><span class="gradient-text">Inkura</span></h1>
+      <p class="subtitle">A premium reading app designed for clarity, calm, and long-form focus.</p>
+      <div class="actions">
+        <a class="btn primary" href="./support.html">Get Support</a>
+        <a class="btn" href="./privacy.html">Privacy Policy</a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Reading System</h3>
+          <p>Bookshelf management, progress tracking, and polished typography for distraction-free reading.</p>
+        </article>
+        <article class="card">
+          <h3>Import & Sources</h3>
+          <p>Local EPUB/TXT import and rule-based source support for flexible content access.</p>
+        </article>
+        <article class="card">
+          <h3>Premium Services</h3>
+          <p>TTS, iCloud sync, and StoreKit purchase/restore flows aligned with App Store standards.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Inkura</span>
+      <a href="mailto:support@inkura.app">support@inkura.app</a>
+    </footer>
   </main>
-
-  <section class="panel">
-    <h2>核心能力</h2>
-    <ul>
-      <li>书架与阅读进度管理</li>
-      <li>本地 EPUB / TXT 导入</li>
-      <li>书源规则引擎与内容净化</li>
-      <li>TTS 朗读与 iCloud 同步</li>
-      <li>StoreKit 购买与恢复购买</li>
-    </ul>
-  </section>
-
-  <footer>
-    <span>© 2026 Inkura</span>
-    <a href="mailto:support@inkura.app">support@inkura.app</a>
-  </footer>
 </body>
 </html>
